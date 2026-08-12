@@ -1,4 +1,4 @@
-## KELOMPOK 3 TI-C 2025
+## KELOMPOK 3 TI-C AKT 25
 
 1. Riyanda Ahyaritama (25071102794)
 2. Mufid Waladi (25071104210)
