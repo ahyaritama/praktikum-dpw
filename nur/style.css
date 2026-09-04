@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+  line-height: 1.5;
+}
+
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: white;
+  color: black;
+}
+
+header {
+  border: 2px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 20px 0;
+}
+
+nav {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: black;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  color: black;
+  background-color: white;
+  padding: 5px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  border: 2px solid black;
+  padding: 15px;
+  background-color: white;
+}
+
+#konten {
+  width: 70%;
+}
+
+section {
+  border: 2px solid black;
+  padding: 20px;
+  background-color: white;
+}
+
+section h2 {
+  text-align: center;
+}
+
+#umum {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+article {
+  color: black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+aside {
+  width: 30%;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: white;
+  text-align: justify;
+}
+
+aside h2 {
+  text-align: center;
+}
+
+aside img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 15px auto;
+  border: 1px solid black;
+}
+
+mark {
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+}
+
+footer {
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
