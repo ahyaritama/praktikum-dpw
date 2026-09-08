@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcf3ff;
+    color: #ed5f5f;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+header {
+    border: 2px solid #ed5f5f;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #eef7fa;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+header h1 small {
+    font-size: 16px;
+}
+
+nav {
+    border: 2px dashed #8b9aa3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ed5f5f;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    gap: 15px;
+    border: 2px solid #ed5f5f;
+    padding: 15px;
+    align-items: stretch;
+    margin-bottom: 15px;
+    grid-template-columns: 3fr 1fr;
+
+}
+
+#konten {
+    border: 2px dashed #8b9aa3;
+    padding: 15px;
+    height: 100%;
+    background-color: #eef7fa;
+}
+
+section {
+    border: 2px dashed #8b9aa3;
+    padding: 15px;
+
+    margin-bottom: 15px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+section h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,td {
+    border: 1px solid #555555;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+  background-color: #dcecf2;
+}
+
+article a {
+    color: #ed5f5f;
+    font-weight: bold;
+}
+
+aside {
+    border: 2px dashed #8b9aa3;
+    padding: 15px;
+    height: 100%;
+    background-color: #eef7fa;
+}
+
+aside h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+aside h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+aside img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+}
+
+mark {
+    padding: 3px 6px;
+    color: #fde6e6;
+    background-color: #ed5f5f;
+    font-weight: bold;
+}
+
+footer {
+    border: 2px solid #333333;
+    background-color: #eef7fa;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
