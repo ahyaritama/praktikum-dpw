@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-size: 32px;
+}
+
+@media (width <= 800px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FFF449;
+}
+
+header {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FED24F;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 0 10rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-article {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+@media (width <= 800px) {
+    #main-article {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#content {
+    border: 1px solid;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+article {
+    border: 1px solid;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    text-align: justify;
+}
+
+aside {
+    width: 200%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+@media (width <= 800px) {
+    #content {
+        width: 100%;
+    }
+
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    #info {
+        display: flex;
+        align-items: center;
+    }
+}
+
+img {
+    width: 10rem;
+    height: auto;
+    max-height: 10rem;
+}
+
+footer {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    background-color: #FED24F;
+}
+
+table {
+    width: 50%;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border: 3px solid;
+}
+
+table th {
+    border: 3px solid;
+    font-variant: small-caps;
+}
+
+table td {
+    border: 1px solid;
+    text-align: center;
+}
