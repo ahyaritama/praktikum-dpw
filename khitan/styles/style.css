@@ -1,0 +1,93 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+}
+
+.judul{
+    border-radius: 6px;
+    width: fit-content;
+
+}
+
+.semua {
+    background-color: silver;
+}
+
+.utama {
+    display: flex;
+}
+
+.interaksi {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.menu{
+    background-color:bisque;
+    text-decoration: none;
+    color: rgb(15, 31, 43);
+
+}
+
+.menu:hover {
+    background-color:blueviolet;
+    color: brown;
+}
+
+#kata1 {
+    border: 2px solid slategray;
+    background-color: rgb(169, 182, 195);
+    width: fit-content;
+    border-radius: 8px;
+
+}
+
+#serlok {
+    border: 2px solid slategrey;
+    background-color: rgb(111, 123, 192);
+    width: fit-content;
+    border-radius: 4px;
+
+}
+
+#klik{
+    text-decoration: none;
+    color: rgb(222, 228, 141);
+}
+
+#klik:hover{
+    color: rgb(0, 251, 255);
+}
+
+#ucapan{
+    font-weight: bold;
+}
+
+#satu{
+        background-color: slategray;
+}
+
+.salam , #namaS{
+    text-align: center;
+    margin: auto;
+
+}
+
+
+.katakata {
+    background-color: aliceblue;
+    flex-direction: column;
+}
+
+.tabel{
+    text-align: center;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+.bawah {
+    font-variant:  small-caps;
+    background-color: bisque;
+}
