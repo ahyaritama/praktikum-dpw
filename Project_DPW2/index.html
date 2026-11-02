@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan - Mufid & Cia</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Playfair Display, Montserrat, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+          colors: {
+            brand: {
+              green: '#1b5e3a',
+              lightGreen: '#238b45',
+              bgLight: '#faf8f5',
+              cardBg: '#faf9f6',
+              textDark: '#1e293b',
+              textMuted: '#64748b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Texture background & watermark ticket effect */
+    .ticket-bg {
+      background-color: #faf9f6;
+      background-image: radial-gradient(circle at 45% 20%, rgba(27, 94, 58, 0.04) 0%, rgba(27, 94, 58, 0.04) 8px, transparent 8px, transparent 100%),
+        radial-gradient(circle at 45% 20%, rgba(27, 94, 58, 0.03) 0%, rgba(27, 94, 58, 0.03) 24px, transparent 24px, transparent 100%),
+        radial-gradient(circle at 45% 20%, rgba(27, 94, 58, 0.02) 0%, rgba(27, 94, 58, 0.02) 48px, transparent 48px, transparent 100%),
+        radial-gradient(circle at 45% 20%, rgba(27, 94, 58, 0.015) 0%, rgba(27, 94, 58, 0.015) 80px, transparent 80px, transparent 100%),
+        radial-gradient(circle at 45% 20%, rgba(27, 94, 58, 0.01) 0%, rgba(27, 94, 58, 0.01) 120px, transparent 120px, transparent 100%);
+    }
+  </style>
+</head>
+
+<body class="font-sans min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-stone-900">
+
+  <!-- BACKGROUND FULL SCREEN -->
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+    style="background-image: url('assets/01-bg\ cover.png');">
+    <!-- Dark overlay pada background luar -->
+    <div class="absolute inset-0 bg-black/30"></div>
+  </div>
+
+  <!-- Top Right Menu Icon -->
+  <div class="absolute top-6 right-6 z-20 text-white/90 cursor-pointer hover:text-white transition">
+    <div class="w-8 h-8 bg-black/70 rounded-full flex items-center justify-center">
+      <img src="assets/01-logo music.png" alt="icon music" class="w-3.5 object-cover">
+    </div>
+  </div>
+
+  <!-- TICKET CARD CONTAINER (max-w-4xl agar proporsional melebar) -->
+  <div
+    class="relative z-10 w-[95%] max-w-4xl bg-[#faf9f6] rounded-[24px] shadow-2xl ticket-bg flex overflow-hidden border border-stone-200/50">
+
+    <!-- LEFT SECTION  -->
+    <div class="flex-1 p-6 md:p-8 flex flex-col justify-between border-r-2 border-dashed border-stone-300 relative">
+
+      <!-- Notches / Cutouts Top & Bottom Divider -->
+      <div class="absolute -top-4 -right-4 w-8 h-8 bg-black/40 rounded-full z-20"></div>
+      <div class="absolute -bottom-4 -right-4 w-8 h-8 bg-black/40 rounded-full z-20"></div>
+
+      <!-- Upper Info Header -->
+      <div class="flex justify-between items-center text-[11px] font-semibold tracking-wider text-stone-500 uppercase">
+        <span>BOARDING PASS</span>
+        <span>VIP CLASS</span>
+      </div>
+
+      <!-- Names Section -->
+      <div class="my-5">
+        <div class="grid grid-cols-2 gap-4 items-center">
+          <!-- Left Name -->
+          <div>
+            <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">DARI</p>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-[#1b5e3a] tracking-tight">Mufid</h1>
+          </div>
+
+          <!-- Right Name -->
+          <div class="text-right pl-6">
+            <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">TUJUAN</p>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-[#1b5e3a] tracking-tight">Cia</h1>
+          </div>
+        </div>
+
+        <!-- Dashed connector with Ampersand -->
+        <div class="relative flex items-center justify-between my-3">
+          <div class="w-[40%] border-b border-dashed border-stone-400 relative">
+            <span class="absolute -left-1 -top-[3.5px] w-2 h-2 rounded-full bg-[#1b5e3a]"></span>
+          </div>
+          <span class="font-serif italic text-2xl font-bold text-[#1b5e3a] px-2">&</span>
+          <div class="w-[40%] border-b border-dashed border-stone-400 relative">
+            <span class="absolute -right-1 -top-[3.5px] w-2 h-2 rounded-full bg-[#1b5e3a]"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passenger Info -->
+      <div class="mb-5">
+        <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">PENUMPANG</p>
+        <h2 class="font-sans text-xl font-bold text-[#1b5e3a] tracking-wide">Nama Tamu</h2>
+        <div class="w-full border-b border-dotted border-stone-300 mt-2"></div>
+      </div>
+
+      <!-- Details Grid (Pembungkus div h-8 dihapus) -->
+      <!-- Details Grid (Tanggal, Gerbang, Boarding, Tujuan) -->
+      <div class="grid grid-cols-2 gap-y-4 gap-x-6">
+        <!-- Tanggal -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">TANGGAL</p>
+          <div class="h-8 flex items-center">
+            <p class="font-mono text-sm md:text-base font-bold text-stone-700">Jum'at, 27 November 2027</p>
+          </div>
+        </div>
+
+        <!-- Gerbang -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">GERBANG</p>
+          <div class="h-8 flex items-center">
+            <p class="font-hand text-2xl md:text-3xl font-semibold text-[#1b5e3a] leading-none">Pelaminan</p>
+          </div>
+        </div>
+
+        <!-- Boarding -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">BOARDING</p>
+          <div class="h-8 flex items-center">
+            <p class="font-mono text-sm md:text-base font-bold text-stone-700">08.00 WIB</p>
+          </div>
+        </div>
+
+        <!-- Tujuan -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-1">TUJUAN</p>
+          <div class="h-8 flex items-center">
+            <p class="font-hand text-2xl md:text-3xl font-semibold text-[#1b5e3a] leading-none">Pekanbaru, Riau</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Tagline -->
+      <div class="mt-6 pt-4 border-t border-stone-200/80 text-center">
+        <p class="text-xs text-stone-500 font-medium italic">Tunjukkan tiket ini dengan senyuman.</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SECTION (STUB / TICKET STUB) -->
+    <div class="w-64 md:w-72 p-6 md:p-8 flex flex-col justify-between items-center bg-[#faf9f6]/80 text-center">
+
+      <!-- Header Stub (Tag typo diperbaiki) -->
+      <div>
+        <p class="text-[10px] font-bold tracking-wider text-stone-500 uppercase">UNDANGAN PERNIKAHAN</p>
+      </div>
+
+      <!-- Barcode Section (Menggunakan CSS agar tidak perlu asset gambar luar, opsional bisa diubah kembali ke img) -->
+      <div>
+        <img src="assets/01-barcode.png" alt="Deskripsi Gambar" class="w-45" />
+      </div>
+
+      <!-- Big Monogram M & C -->
+      <div>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#1b5e3a] tracking-wider mb-1">M & C</h2>
+        <p class="font-hand text-xl text-stone-500 italic">save the date</p>
+      </div>
+
+      <!-- Button "Buka Undangan" -->
+      <div class="w-full mt-5">
+        <a href="#"
+          class="inline-block w-full py-3 px-4 bg-[#238b45] hover:bg-[#1b5e3a] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition duration-200 transform hover:-translate-y-0.5">
+          BUKA UNDANGAN
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
