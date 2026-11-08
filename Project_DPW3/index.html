@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Mufid & Cia</title>
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Great Vibes untuk tulisan sambung/nama, Cormorant Garamond untuk teks elegan, Montserrat untuk teks ui -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Warna berdasarkan palet mockup
+                        'sage': '#CCDEC1',    // Hijau pastel untuk background luar
+                        'cream': '#F9F8F3',   // Putih tulang/cream untuk background arch & section
+                        'brown': '#7C6757',   // Coklat untuk tombol dan teks penekanan
+                        'dark': '#4A4A4A',     // Abu gelap untuk teks biasa
+                        'black': '#302D29'
+                    },
+                    fontFamily: {
+                        'script': ['"Great Vibes"', 'cursive'],
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-dark font-serif antialiased overflow-x-hidden relative">
+
+    <!-- Navbar 3 Titik (Kanan Atas) -->
+    <nav class="fixed top-4 right-4 z-50">
+        <button id="menu-btn"
+            class="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md text-brown hover:bg-sage transition-colors focus:outline-none">
+            <!-- Icon 3 titik vertikal (kebab menu) -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+            </svg>
+        </button>
+
+        <!-- Menu Dropdown -->
+        <div id="menu-dropdown"
+            class="hidden absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-md rounded-xl shadow-xl py-2 border border-sage/50 font-sans text-sm transform origin-top-right transition-all">
+            <a href="#cover" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Cover</a>
+            <a href="#greeting"
+                class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Greeting</a>
+            <a href="#mempelai" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Bride &
+                Groom</a>
+            <a href="#countdown"
+                class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Countdown</a>
+            <a href="#story" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Love
+                Story</a>
+            <a href="#lokasi" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Lokasi &
+                Jadwal</a>
+            <a href="#rsvp" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">RSVP &
+                Wishes</a>
+        </div>
+    </nav>
+
+    <!-- 1. SECTION COVER -->
+    <!-- [ASSET INFO]: Ganti class bg-cream dengan bg-[url('path-ke-gambar-floral-mu.jpg')] untuk background bunga -->
+    <section id="cover"
+        class="min-h-screen flex flex-col justify-center items-center relative bg-cream p-4 md:p-8 bg-cover bg-center">
+        <img src="assets/atas1.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-20 pointer-events-none">
+        <img src="assets/halaman1-kanan.png" alt="kanan bawah"
+            class="absolute bottom-0 right-0 h-[400px] w-auto z-20 pointer-events-none">
+        <img src="assets/halaman1-kiri.png" alt="kiri bawah"
+            class="absolute bottom-0 left-0 h-[400px] w-auto z-20 pointer-events-none">
+        <!-- Bentuk Arch (Lengkungan) -->
+        <div
+            class="bg-sage p-10 mt-[120px] md:p-16 rounded-full text-center w-full max-w-md shadow-[inset_0_4px_12px_rgba(0,0,0,0.2)] relative mt-10">
+            <p class="text-3xl mb-4 tracking-wide text-black">We invite you to<br>The Wedding of</p>
+            <h1 class="pt-10 font-script text-6xl md:text-6xl text-black mb-10 leading-tight">Mufid & Cia</h1>
+
+            <div
+                class="border border-dark/30 rounded-2xl p-5 mb-10 inline-block min-w-[200px] bg-white/50 backdrop-blur-sm">
+                <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-2">Kepada Yth.</p>
+                <p class="font-bold text-xl border-b border-dark/20 pb-2 mb-2">Nama Orang</p>
+                <p class="font-sans text-xs">Di tempat</p>
+            </div>
+
+            <div>
+                <!-- Tombol ini diarahkan ke ID greeting -->
+                <a href="#greeting"
+                    class="inline-flex items-center justify-center gap-2 bg-brown text-white font-sans text-sm font-semibold tracking-wider px-8 py-3 rounded-full hover:bg-brown/80 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    <!-- Icon Amplop -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                        <path
+                            d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                    </svg>
+                    Buka Undangan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECTION GREETING -->
+    <section id="greeting" class="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cream">
+        <h2 class="text-3xl md:text-4xl mb-4 italic">You Are Invited To</h2>
+        <h3 class="font-script text-6xl md:text-7xl text-brown mb-6">Mufid & Cia</h3>
+        <p class="text-xl md:text-2xl mb-10 tracking-[0.3em] uppercase font-bold border-b border-brown pb-4">Wedding Day
+        </p>
+        <p class="max-w-md mx-auto leading-relaxed text-lg text-gray-700">
+            Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dan menjadi bagian dari hari istimewa kami.
+        </p>
+    </section>
+
+    <!-- 3. SECTION MEMPELAI -->
+    <!-- [ASSET INFO]: Ganti div abu-abu dengan tag <img> untuk foto mempelai -->
+    <section id="mempelai" class="py-24 bg-sage/30">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-script text-6xl text-center text-brown mb-16">Bride & Groom</h2>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-8">
+                <!-- Mempelai Pria -->
+                <div class="text-center w-full md:w-5/12">
+                    <!-- Bingkai Arch Foto -->
+                    <div
+                        class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
+                        <!-- <img src="assets/mufid.jpg" alt="Mufid" class="w-full h-full object-cover"> -->
+                        <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">Foto
+                            Mufid</div>
+                    </div>
+                    <h3 class="text-4xl font-bold mb-3">Mufid Waladi</h3>
+                    <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Precious Son of</p>
+                    <p class="text-xl italic">Hadi Ujan & Emilia</p>
+                </div>
+
+                <!-- Pemisah Dan -->
+                <div class="font-script text-7xl text-brown md:w-2/12 text-center">&</div>
+
+                <!-- Mempelai Wanita -->
+                <div class="text-center w-full md:w-5/12">
+                    <!-- Bingkai Arch Foto -->
+                    <div
+                        class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
+                        <!-- <img src="assets/cia.jpg" alt="Cia" class="w-full h-full object-cover"> -->
+                        <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">Foto
+                            Cia</div>
+                    </div>
+                    <h3 class="text-4xl font-bold mb-3">Velicia Regina Ananta</h3>
+                    <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Lovely Daughter of</p>
+                    <p class="text-xl italic">Riyanda Ahyaritama & Nurcahyani</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION COUNTDOWN -->
+    <!-- [ASSET INFO]: Ganti class bg-gray-800 dengan bg-[url('assets/sunset.jpg')] -->
+    <section id="countdown" class="py-32 bg-gray-800 text-white text-center relative bg-cover bg-center">
+        <!-- Overlay gelap agar teks terbaca -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4">
+            <div class="grid grid-cols-4 gap-4 md:gap-8 divide-x divide-white/30">
+                <div class="text-center">
+                    <p class="text-5xl md:text-6xl mb-2 font-bold shadow-sm">123</p>
+                    <p class="font-sans text-xs md:text-sm uppercase tracking-[0.2em]">Days</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-5xl md:text-6xl mb-2 font-bold shadow-sm">45</p>
+                    <p class="font-sans text-xs md:text-sm uppercase tracking-[0.2em]">Hours</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-5xl md:text-6xl mb-2 font-bold shadow-sm">30</p>
+                    <p class="font-sans text-xs md:text-sm uppercase tracking-[0.2em]">Mins</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-5xl md:text-6xl mb-2 font-bold shadow-sm">30</p>
+                    <p class="font-sans text-xs md:text-sm uppercase tracking-[0.2em]">Secs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION LOVE STORY -->
+    <section id="story" class="py-24 bg-cream">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-script text-6xl text-center text-brown mb-16">Our Love Story</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-sage/40 text-center hover:shadow-md transition-shadow">
+                    <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Kenalan</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                        Berawal dari ketidaksengajaan di sebuah kedai kopi, cangkir yang tertukar dan obrolan singkat
+                        yang ternyata berlanjut. Dari sekadar menyapa, interaksi yang santai perlahan berubah jadi
+                        kebiasaan harian.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-sage/40 text-center hover:shadow-md transition-shadow">
+                    <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Jadian</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                        Seiring berjalannya waktu, kecocokan dan rasa nyaman makin terasa. Tanpa drama atau perayaan
+                        berlebihan, kami sepakat untuk mulai berjalan berdampingan dan saling mendukung satu sama lain.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-sage/40 text-center hover:shadow-md transition-shadow">
+                    <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Tunangan</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                        Kini, dengan penuh rasa syukur dan bahagia, kami melangkah ke babak baru dalam kisah kami,
+                        menuju sebuah janji untuk saling menemani, menjaga, dan mencintai dalam setiap langkah
+                        kehidupan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION LOKASI -->
+    <section id="lokasi" class="py-24 bg-sage/20 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-script text-6xl text-brown mb-8">Lokasi</h2>
+            <p class="mb-10 text-gray-700 max-w-2xl mx-auto text-xl leading-relaxed">
+                Dengan penuh rasa hormat kami mengharapkan kehadiran Bapak/Ibu/Saudara sekalian pada Acara Pernikahan
+                kami yang akan kami laksanakan pada:
+            </p>
+
+            <p
+                class="text-3xl md:text-4xl font-bold text-brown mb-12 bg-white inline-block px-8 py-4 rounded-full shadow-sm border border-sage/50">
+                Jumat, 02 Oktober 2026
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                <!-- Jadwal Akad -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm w-full md:w-72 border-t-4 border-brown">
+                    <h4 class="font-bold text-2xl mb-4 italic">Akad Nikah</h4>
+                    <div class="font-sans space-y-2 text-gray-600">
+                        <p class="font-semibold text-dark">Jumat</p>
+                        <p>02.10.2026</p>
+                        <p class="bg-sage/20 inline-block px-4 py-1 rounded-full text-brown font-semibold mt-2">08:00 -
+                            10:00</p>
+                    </div>
+                </div>
+
+                <!-- Jadwal Resepsi (Asumsi dari mockup yang sama bentuknya) -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm w-full md:w-72 border-t-4 border-brown">
+                    <h4 class="font-bold text-2xl mb-4 italic">Resepsi</h4>
+                    <div class="font-sans space-y-2 text-gray-600">
+                        <p class="font-semibold text-dark">Jumat</p>
+                        <p>02.10.2026</p>
+                        <p class="bg-sage/20 inline-block px-4 py-1 rounded-full text-brown font-semibold mt-2">10:00 -
+                            Selesai</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Tempat -->
+            <div class="mb-16">
+                <h3 class="font-bold text-3xl mb-3 text-brown">Hotel Pangeran</h3>
+                <p class="text-gray-600 text-xl">Jln. Jendral Sudirman No.371-373,<br>Cinta Raya, Sail, Kota Pekanbaru,
+                    Riau</p>
+            </div>
+
+            <!-- Dress Code -->
+            <div class="bg-white/60 p-8 rounded-2xl max-w-md mx-auto border border-sage/40 backdrop-blur-sm">
+                <p class="text-2xl mb-3 font-bold">Dress Code:</p>
+                <p class="font-sans text-sm mb-4 text-gray-600">We kindly ask that you wear these colors to our special
+                    day</p>
+                <p class="font-sans font-bold text-lg text-brown uppercase tracking-widest bg-sage/30 py-2 rounded-lg">
+                    Any Kind of Pastel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 & 8. SECTION RSVP & WISHES -->
+    <section id="rsvp"
+        class="py-24 bg-cream bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTAgMGg4MHY4MEgwem00MCA0MGMxMS4wNDYgMCAyMC04Ljk1NCAyMC0yMFM1MS4wNDYgMCA0MCAwIDIwIDguOTU0IDIwIDIwczguOTU0IDIwIDIwIDIwem0wIDEwYzE2LjU2OCAwIDMwLTEzLjQzMiAzMC0zMFM1Ni41NjggMCA0MCAwIDEwIDEzLjQzMiAxMCAzMHMxMy40MzIgMzAgMzAgMzB6bTAgMTBjMjIuMDkxIDAgNDAtMTcuOTA5IDQwLTQwUzYyLjA5MSAwIDQwIDAgMCAxNy45MDkgMCA0MHMxNy45MDkgNDAgNDAgNDB6IiBmaWxsPSIjZDFkOWNhIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- FORM RSVP -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-sage/40">
+                <h2 class="font-script text-5xl text-center mb-8 text-brown">RSVP</h2>
+                <form class="flex flex-col gap-5 font-sans">
+                    <input type="text" placeholder="Nama"
+                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                    <input type="email" placeholder="Email"
+                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                    <input type="tel" placeholder="Nomor Telfon"
+                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+
+                    <div class="relative">
+                        <select
+                            class="w-full p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown appearance-none text-gray-600 transition">
+                            <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                            <option value="hadir">Hadir</option>
+                            <option value="tidak_hadir">Tidak Hadir</option>
+                        </select>
+                        <!-- Custom Select Arrow -->
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <input type="number" placeholder="Jumlah Tamu"
+                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+
+                    <button type="submit"
+                        class="bg-brown text-white py-4 rounded-xl hover:bg-brown/80 transition-colors font-semibold tracking-wider uppercase mt-4 shadow-md">
+                        Kirim RSVP
+                    </button>
+                </form>
+            </div>
+
+            <!-- FORM WISHES -->
+            <div class="bg-sage/20 p-8 rounded-2xl shadow-sm border border-sage/40 flex flex-col h-full">
+                <h2 class="font-script text-5xl text-center mb-8 text-brown">Wedding Wishes</h2>
+                <form class="flex flex-col gap-4 font-sans mb-8">
+                    <input type="text" placeholder="Nama"
+                        class="p-4 border border-white rounded-xl bg-white focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
+                    <textarea rows="3" placeholder="Tuliskan ucapan anda"
+                        class="p-4 border border-white rounded-xl bg-white focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm resize-none"></textarea>
+
+                    <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
+                        <span>Sisa huruf: 300</span>
+                        <button type="button"
+                            class="bg-brown text-white px-8 py-3 rounded-full hover:bg-brown/80 transition shadow-md font-semibold tracking-wide">
+                            Kirim
+                        </button>
+                    </div>
+                </form>
+
+                <!-- List Ucapan (Scrollable) -->
+                <div class="space-y-4 overflow-y-auto flex-grow max-h-[300px] pr-2 font-sans custom-scrollbar">
+                    <div class="bg-white p-4 rounded-xl shadow-sm flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-lg shrink-0">
+                            V</div>
+                        <div>
+                            <p class="font-bold text-gray-800">Vito</p>
+                            <p class="text-gray-600 mt-1 text-sm">Happy Wedding!</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-lg shrink-0">
+                            C</div>
+                        <div>
+                            <p class="font-bold text-gray-800">Cika</p>
+                            <p class="text-gray-600 mt-1 text-sm">Wow congratss! Semoga lancar sampai hari H.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="bg-brown text-white text-center py-6 font-sans text-sm">
+        <p>&copy; 2026 Wedding Invitation of Mufid & Cia. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Navbar 3 Titik -->
+    <script src="script.js"></script>
+</body>
+
+</html>
