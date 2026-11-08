@@ -113,7 +113,7 @@
 
     <!-- 2. SECTION GREETING -->
     <section id="greeting"
-        class="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cream">
+        class="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cream z-20">
         <img src="assets/atas2.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-20 pointer-events-none">
         <img src="assets/gold-kiri.png" alt="gold kiri"
             class="absolute bottom-0 -left-[5%] h-[60%] w-auto z-10 mix-blend-multiply pointer-events-none">
@@ -121,7 +121,7 @@
             class="absolute bottom-0 -right-[5%] h-[60%] w-auto z-10 mix-blend-multiply pointer-events-none">
         <img src="assets/halaman2-bawahkiri.png" alt="kiri bawah"
             class="absolute bottom-0 left-0 h-[400px] w-auto z-10 pointer-events-none">
-        <img src="assets/halaman2-bawahkanan.png" alt="kiri bawah"
+        <img src="assets/halaman2-bawahkanan.png" alt="kanan bawah"
             class="absolute bottom-0 right-0 h-[400px] w-auto z-10 pointer-events-none">
         <img src="assets/halaman2-ataskiri.png" alt="kiri atas"
             class="absolute top-0 left-0 h-[200px] w-auto z-30 pointer-events-none">
@@ -148,23 +148,31 @@
     </section>
 
     <!-- 3. SECTION MEMPELAI -->
-    <!-- [ASSET INFO]: Ganti div abu-abu dengan tag <img> untuk foto mempelai -->
     <section id="mempelai">
-        <div class="relative py-24 bg-sage/20 z-11">
+        <div class="relative py-24 bg-sage/20 z-10">
+            <img src="assets/atas2.png" alt="top-arc"
+                class="absolute -top-[5%] left-0 w-full h-auto z-10 pointer-events-none">
+            <img src="assets/halaman2-bawahkiri.png" alt="kiri bawah"
+                class="absolute bottom-0 left-0 h-[400px] w-auto z-10 pointer-events-none">
+            <img src="assets/halaman2-bawahkanan.png" alt="kanan bawah"
+                class="absolute bottom-0 right-0 h-[400px] w-auto z-10 pointer-events-none">
+
             <div class="max-w-5xl mx-auto px-6 ">
-                <h2 class="font-script text-6xl text-center text-brown mb-16">Bride & Groom</h2>
+                <h2 class="mt-[10%] font-script text-6xl text-center text-brown mb-5">Bride & Groom</h2>
 
                 <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-8">
                     <!-- Mempelai Pria -->
                     <div class="text-center w-full md:w-5/12">
-                        <!-- Bingkai Arch Foto -->
                         <div
-                            class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
-                            <!-- <img src="assets/mufid.jpg" alt="Mufid" class="w-full h-full object-cover"> -->
-                            <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">
-                                Foto
-                                Mufid</div>
+                            class="relative w-[300px] h-[350px] mx-auto mb-8 rounded-t-full rounded-b-xl shadow-xl bg-sage overflow-hidden flex items-center justify-center p-4">
+                            <div class="w-[82%] h-[90%] rounded-t-full rounded-b-[40%] overflow-hidden relative z-0">
+                                <img src="assets/groom.jpg" alt="Mufid Waladi"
+                                    class="w-full h-full object-cover scale-[1.3] translate-y-4">
+                            </div>
+                            <img src="assets/bride-groom-border.png" alt="border"
+                                class="absolute inset-0 w-full h-full object-cover pointer-events-none z-10">
                         </div>
+
                         <h3 class="text-4xl font-bold mb-3">Mufid Waladi</h3>
                         <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Precious Son of</p>
                         <p class="text-xl italic">Hadi Ujan & Emilia</p>
@@ -175,14 +183,16 @@
 
                     <!-- Mempelai Wanita -->
                     <div class="text-center w-full md:w-5/12">
-                        <!-- Bingkai Arch Foto -->
                         <div
-                            class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
-                            <!-- <img src="assets/cia.jpg" alt="Cia" class="w-full h-full object-cover"> -->
-                            <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">
-                                Foto
-                                Cia</div>
+                            class="relative w-[300px] h-[350px] mx-auto mb-8 rounded-t-full rounded-b-xl shadow-xl bg-sage overflow-hidden flex items-center justify-center p-4">
+                            <div class="w-[82%] h-[90%] rounded-t-full rounded-b-[40%] overflow-hidden relative z-0">
+                                <img src="assets/bride.png" alt="Velicia Regina Ananta"
+                                    class="w-full h-full object-cover scale-[1.3]">
+                            </div>
+                            <img src="assets/bride-groom-border.png" alt="border"
+                                class="absolute inset-0 w-full h-full object-cover pointer-events-none z-10">
                         </div>
+
                         <h3 class="text-4xl font-bold mb-3">Velicia Regina Ananta</h3>
                         <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Lovely Daughter of</p>
                         <p class="text-xl italic">Riyanda Ahyaritama & Nurcahyani</p>
