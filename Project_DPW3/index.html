@@ -44,7 +44,7 @@
     <!-- Navbar 3 Titik (Kanan Atas) -->
     <nav class="fixed top-4 right-4 z-50">
         <button id="menu-btn"
-            class="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md text-brown hover:bg-sage transition-colors focus:outline-none">
+            class="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md text-brown hover:bg-brown hover:text-sage transition-colors focus:outline-none">
             <!-- Icon 3 titik vertikal (kebab menu) -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="w-6 h-6">
@@ -56,7 +56,7 @@
         <!-- Menu Dropdown -->
         <div id="menu-dropdown"
             class="hidden absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-md rounded-xl shadow-xl py-2 border border-sage/50 font-sans text-sm transform origin-top-right transition-all">
-            <a href="#cover" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Cover</a>
+            <a href="#cover" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Home</a>
             <a href="#greeting"
                 class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Greeting</a>
             <a href="#mempelai" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Bride &
@@ -73,19 +73,18 @@
     </nav>
 
     <!-- 1. SECTION COVER -->
-    <!-- [ASSET INFO]: Ganti class bg-cream dengan bg-[url('path-ke-gambar-floral-mu.jpg')] untuk background bunga -->
     <section id="cover"
         class="min-h-screen flex flex-col justify-center items-center relative bg-cream p-4 md:p-8 bg-cover bg-center">
-        <img src="assets/atas1.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-20 pointer-events-none">
+        <img src="assets/atas1.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-10 pointer-events-none">
         <img src="assets/halaman1-kanan.png" alt="kanan bawah"
-            class="absolute bottom-0 right-0 h-[400px] w-auto z-20 pointer-events-none">
+            class="absolute bottom-0 right-0 h-[400px] w-auto z-10 pointer-events-none">
         <img src="assets/halaman1-kiri.png" alt="kiri bawah"
-            class="absolute bottom-0 left-0 h-[400px] w-auto z-20 pointer-events-none">
+            class="absolute bottom-0 left-0 h-[400px] w-auto z-10 pointer-events-none">
         <!-- Bentuk Arch (Lengkungan) -->
         <div
             class="bg-sage p-10 mt-[120px] md:p-16 rounded-full text-center w-full max-w-md shadow-[inset_0_4px_12px_rgba(0,0,0,0.2)] relative mt-10">
             <p class="text-3xl mb-4 tracking-wide text-black">We invite you to<br>The Wedding of</p>
-            <h1 class="pt-10 font-script text-6xl md:text-6xl text-black mb-10 leading-tight">Mufid & Cia</h1>
+            <h1 class="pt-10 font-script text-6xl md:text-6xl text-brown mb-10 leading-tight">Mufid & Cia</h1>
 
             <div
                 class="border border-dark/30 rounded-2xl p-5 mb-10 inline-block min-w-[200px] bg-white/50 backdrop-blur-sm">
@@ -112,55 +111,76 @@
     </section>
 
     <!-- 2. SECTION GREETING -->
-    <section id="greeting" class="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cream">
-        <h2 class="text-3xl md:text-4xl mb-4 italic">You Are Invited To</h2>
-        <h3 class="font-script text-6xl md:text-7xl text-brown mb-6">Mufid & Cia</h3>
-        <p class="text-xl md:text-2xl mb-10 tracking-[0.3em] uppercase font-bold border-b border-brown pb-4">Wedding Day
-        </p>
-        <p class="max-w-md mx-auto leading-relaxed text-lg text-gray-700">
-            Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dan menjadi bagian dari hari istimewa kami.
-        </p>
+    <section id="greeting"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cream">
+        <img src="assets/atas2.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-20 pointer-events-none">
+        <!-- <img src="assets/halaman2-kiri.png" alt="kanan bawah"
+            class="absolute bottom-0 left-0 h-[100%] w-auto z-30 pointer-events-none"> -->
+        <img src="assets/gold-kiri.png" alt="gold kiri"
+            class="absolute bottom-0 right-0-0 h-[100%] w-auto z-10 mix-blend-multiply pointer-events-none">
+
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-2/5 h-[70vh] rounded-t-full overflow-hidden">
+            <img src="assets/pilar2.png" alt="pilar" class="w-full h-full object-cover block">
+            <div class="absolute inset-0 rounded-t-full pointer-events-none shadow-[inset_0_8px_20px_rgba(0,0,0,0.15)]">
+            </div>
+        </div>
+        <div class="relative z-10 translate-y-24">
+            <h2 class="text-3xl md:text-4xl mb-4 italic">You Are Invited To</h2>
+            <h3 class="font-script text-6xl md:text-7xl text-brown mb-6">Mufid & Cia</h3>
+            <p class="text-xl md:text-2xl mb-10 tracking-[0.3em] uppercase font-bold border-b border-brown pb-4">Wedding
+                Day
+            </p>
+            <p class="max-w-md mx-auto leading-relaxed text-lg text-gray-700">
+                Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dan menjadi bagian dari hari istimewa kami.
+            </p>
+        </div>
+
     </section>
 
     <!-- 3. SECTION MEMPELAI -->
     <!-- [ASSET INFO]: Ganti div abu-abu dengan tag <img> untuk foto mempelai -->
-    <section id="mempelai" class="py-24 bg-sage/30">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="font-script text-6xl text-center text-brown mb-16">Bride & Groom</h2>
+    <section id="mempelai">
+        <div class="relative py-24 bg-sage/20 z-11">
+            <div class="max-w-5xl mx-auto px-6 ">
+                <h2 class="font-script text-6xl text-center text-brown mb-16">Bride & Groom</h2>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-8">
-                <!-- Mempelai Pria -->
-                <div class="text-center w-full md:w-5/12">
-                    <!-- Bingkai Arch Foto -->
-                    <div
-                        class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
-                        <!-- <img src="assets/mufid.jpg" alt="Mufid" class="w-full h-full object-cover"> -->
-                        <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">Foto
-                            Mufid</div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-8">
+                    <!-- Mempelai Pria -->
+                    <div class="text-center w-full md:w-5/12">
+                        <!-- Bingkai Arch Foto -->
+                        <div
+                            class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
+                            <!-- <img src="assets/mufid.jpg" alt="Mufid" class="w-full h-full object-cover"> -->
+                            <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">
+                                Foto
+                                Mufid</div>
+                        </div>
+                        <h3 class="text-4xl font-bold mb-3">Mufid Waladi</h3>
+                        <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Precious Son of</p>
+                        <p class="text-xl italic">Hadi Ujan & Emilia</p>
                     </div>
-                    <h3 class="text-4xl font-bold mb-3">Mufid Waladi</h3>
-                    <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Precious Son of</p>
-                    <p class="text-xl italic">Hadi Ujan & Emilia</p>
-                </div>
 
-                <!-- Pemisah Dan -->
-                <div class="font-script text-7xl text-brown md:w-2/12 text-center">&</div>
+                    <!-- Pemisah Dan -->
+                    <div class="font-script text-7xl text-brown md:w-2/12 text-center">&</div>
 
-                <!-- Mempelai Wanita -->
-                <div class="text-center w-full md:w-5/12">
-                    <!-- Bingkai Arch Foto -->
-                    <div
-                        class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
-                        <!-- <img src="assets/cia.jpg" alt="Cia" class="w-full h-full object-cover"> -->
-                        <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">Foto
-                            Cia</div>
+                    <!-- Mempelai Wanita -->
+                    <div class="text-center w-full md:w-5/12">
+                        <!-- Bingkai Arch Foto -->
+                        <div
+                            class="w-64 h-[340px] mx-auto bg-sage rounded-t-full rounded-b-xl mb-8 overflow-hidden shadow-xl border-4 border-white relative">
+                            <!-- <img src="assets/cia.jpg" alt="Cia" class="w-full h-full object-cover"> -->
+                            <div class="w-full h-full flex items-center justify-center text-white/50 font-sans text-sm">
+                                Foto
+                                Cia</div>
+                        </div>
+                        <h3 class="text-4xl font-bold mb-3">Velicia Regina Ananta</h3>
+                        <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Lovely Daughter of</p>
+                        <p class="text-xl italic">Riyanda Ahyaritama & Nurcahyani</p>
                     </div>
-                    <h3 class="text-4xl font-bold mb-3">Velicia Regina Ananta</h3>
-                    <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Lovely Daughter of</p>
-                    <p class="text-xl italic">Riyanda Ahyaritama & Nurcahyani</p>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- 4. SECTION COUNTDOWN -->
