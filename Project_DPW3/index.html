@@ -67,7 +67,7 @@
                 Story</a>
             <a href="#gallery" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">
                 Gallery</a>
-            <a href="#lokasi" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Lokasi &
+            <a href="#location" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">Lokasi &
                 Jadwal</a>
             <a href="#rsvp" class="block px-4 py-2 text-dark hover:bg-sage/40 hover:text-brown transition">RSVP &
                 Wishes</a>
@@ -142,7 +142,7 @@
             <p class="text-xl md:text-2xl mb-10 tracking-[0.3em] uppercase font-bold border-b border-brown pb-4">Wedding
                 Day
             </p>
-            <p class="max-w-md mx-auto leading-relaxed text-lg text-gray-700">
+            <p class="max-w-md mx-auto leading-relaxed font-bold text-lg text-gray-500">
                 Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dan menjadi bagian dari hari istimewa kami.
             </p>
         </div>
@@ -176,8 +176,9 @@
                         </div>
 
                         <h3 class="text-4xl font-bold mb-3">Mufid Waladi</h3>
-                        <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Precious Son of</p>
-                        <p class="text-xl italic">Hadi Ujan & Emilia</p>
+                        <p class="font-sans text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Precious
+                            Son of</p>
+                        <p class="text-xl italic font-semibold text-gray-500">Hadi Ujan & Emilia</p>
                     </div>
 
                     <!-- Pemisah Dan -->
@@ -196,8 +197,11 @@
                         </div>
 
                         <h3 class="text-4xl font-bold mb-3">Velicia Regina Ananta</h3>
-                        <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-1">Lovely Daughter of</p>
-                        <p class="text-xl italic">Riyanda Ahyaritama & Nurcahyani</p>
+                        <p class="font-sans text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Lovely
+                            Daughter
+                            of
+                        </p>
+                        <p class="text-xl italic font-semibold text-gray-500">Riyanda Ahyaritama & Nurcahyani</p>
                     </div>
                 </div>
             </div>
@@ -205,7 +209,7 @@
 
     </section>
 
-    <!-- 4. SECTION COUNTDOWN (LENGKAP DENGAN KUPU-KUPU) -->
+    <!-- 4. SECTION COUNTDOWN  -->
     <section id="countdown"
         class="relative min-h-screen flex flex-col justify-center items-center py-20 bg-cream overflow-hidden z-20">
 
@@ -239,21 +243,21 @@
 
             <!-- Tampilan Hitung Mundur -->
             <div class="grid grid-cols-4 gap-6 sm:gap-10 md:gap-16 text-center text-dark">
-                <div class="flex flex-col items-center">
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal mb-1">123</span>
-                    <span class="font-sans text-xs sm:text-sm text-gray-500 font-light">Days</span>
+                <div class="flex flex-col items-center p-5 bg-white/80 rounded-2xl shadow-md shadow-dark/10">
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal mb-1 ">123</span>
+                    <span class="font-sans text-xs sm:text-sm text-gray-500">Days</span>
                 </div>
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center  p-5 bg-white/80 rounded-2xl shadow-md shadow-dark/10">
                     <span class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal mb-1">45</span>
-                    <span class="font-sans text-xs sm:text-sm text-gray-500 font-light">Hours</span>
+                    <span class="font-sans text-xs sm:text-sm text-gray-500">Hours</span>
                 </div>
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center p-5 bg-white/80 rounded-2xl shadow-md shadow-dark/10">
                     <span class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal mb-1">30</span>
-                    <span class="font-sans text-xs sm:text-sm text-gray-500 font-light">Mins</span>
+                    <span class="font-sans text-xs sm:text-sm text-gray-500">Mins</span>
                 </div>
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center p-5 bg-white/80 rounded-2xl shadow-md shadow-dark/10">
                     <span class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal mb-1">0</span>
-                    <span class="font-sans text-xs sm:text-sm text-gray-500 font-light">Secs</span>
+                    <span class="font-sans text-xs sm:text-sm text-gray-500">Secs</span>
                 </div>
             </div>
         </div>
@@ -423,81 +427,136 @@
         </div>
     </section>
 
-    <!-- 6. SECTION LOKASI -->
-    <section id="lokasi" class="py-12 bg-cream text-center relative z-20">
+    <!-- SECTION LOKASI -->
+    <section id="location" class="relative min-h-screen flex items-center justify-center py-16 bg-cream px-4 md:px-12">
+        <img src="assets/halaman2-bawahkanan.png" alt="kiri bawah"
+            class="absolute top-0 left-0 h-[200px] md:h-[200px] w-auto z-10 pointer-events-none opacity-80 rotate-180">
+        <img src="assets/halaman2-bawahkiri.png" alt="kanan bawah"
+            class="absolute top-0 right-0 h-[200px] md:h-[200px] w-auto z-10 pointer-events-none opacity-80 rotate-180">
 
-        <!-- Container Sage (Menggunakan w-[92%] agar menyisakan sisa warna cream di kiri & kanan) -->
-        <div
-            class="relative w-[92%] max-w-5xl mx-auto bg-sage/30 py-16 px-6 md:px-12 rounded-3xl border border-sage/40 overflow-hidden shadow-sm">
+        <!-- Frame Utama sage -->
+        <div class="relative w-full max-w-[1100px] bg-sage/40 rounded-3xl p-8 md:p-12 shadow-sm overflow-hidden">
+            <img src="assets/halaman2-ataskiri.png" alt="dekorasi-kiri"
+                class="absolute top-0 left-0 w-32 md:w-48 pointer-events-none z-0">
+            <img src="assets/halaman2-ataskanan.png" alt="dekorasi-kanan"
+                class="absolute top-0 right-0 w-32 md:w-48 pointer-events-none z-0">
+            <img src="assets/halaman2-bawahkiri.png" alt="dekorasi-bawah-kiri"
+                class="absolute bottom-0 left-0 w-32 md:w-48 pointer-events-none z-0">
+            <img src="assets/halaman2-bawahkanan.png" alt="dekorasi-bawah-kanan"
+                class="absolute bottom-0 right-0 w-32 md:w-48 pointer-events-none z-0">
 
-            <!-- Ornamen Bunga di 4 Sudut Container Sage -->
-            <img src="assets/halaman2-ataskiri.png" alt="kiri atas"
-                class="absolute top-0 left-0 h-[180px] md:h-[260px] w-auto z-10 pointer-events-none opacity-80">
-            <img src="assets/halaman2-ataskanan.png" alt="kanan atas"
-                class="absolute top-0 right-0 h-[180px] md:h-[260px] w-auto z-10 pointer-events-none opacity-80">
-            <img src="assets/halaman2-bawahkiri.png" alt="kiri bawah"
-                class="absolute bottom-0 left-0 h-[180px] md:h-[260px] w-auto z-10 pointer-events-none">
-            <img src="assets/halaman2-bawahkanan.png" alt="kanan bawah"
-                class="absolute bottom-0 right-0 h-[180px] md:h-[260px] w-auto z-10 pointer-events-none">
-
-            <!-- Konten Utama Lokasi -->
-            <div class="relative z-20">
-                <h2 class="font-script text-6xl text-brown mb-8">Lokasi</h2>
-
-                <p class="mb-10 text-gray-700 max-w-2xl mx-auto text-xl leading-relaxed">
+            <!-- Konten Teks & Card -->
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <h2 class="font-script text-5xl md:text-6xl text-brown mb-4">Lokasi</h2>
+                <p class="max-w-xl font-bold md:text-base text-gray-700 mb-6">
                     Dengan penuh rasa hormat kami mengharapkan kehadiran Bapak/Ibu/Saudara sekalian pada Acara
-                    Pernikahan
-                    kami yang akan kami laksanakan pada:
+                    Pernikahan kami yang akan kami laksanakan pada:
                 </p>
 
-                <p
-                    class="text-3xl md:text-4xl font-bold text-brown mb-12 bg-white inline-block px-8 py-4 rounded-full shadow-sm border border-sage/50">
+                <div class="bg-white/80backdrop-blur-sm px-6 py-2 rounded-full font-bold text-gray-800 shadow-sm mb-8">
                     Jumat, 02 Oktober 2026
+                </div>
+
+                <p class="max-w-lg font-bold text-gray-600 mb-8">
+                    Besar harapan kami akan kehadiran Bapak/Ibu/Saudara sekalian tentunya dengan memperhatikan anjuran
+                    dari Pemerintah, Untuk itu kami memberlakukan protokol kesehatan sebagaimana instruksi dibawah ini
                 </p>
 
-                <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
-                    <!-- Jadwal Akad -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm w-full md:w-72 border-t-4 border-brown">
-                        <h4 class="font-bold text-2xl mb-4 italic">Akad Nikah</h4>
-                        <div class="font-sans space-y-2 text-gray-600">
-                            <p class="font-semibold text-dark">Jumat</p>
-                            <p>02.10.2026</p>
-                            <p class="bg-sage/20 inline-block px-4 py-1 rounded-full text-brown font-semibold mt-2">
-                                08:00 - 10:00</p>
+                <!-- Grid 2 Kolom untuk Kartu Acara & Detail -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full h-[320px] max-w-2xl rounded-t-2xl">
+
+                    <!-- Card 1: Akad Nikah -->
+                    <div
+                        class="relative bg-cream pt-24 pb-8 px-6 rounded-t-[300px] rounded-b-2xl shadow-md overflow-hidden flex flex-col items-center text-center">
+                        <img src="assets/location-atas.png" alt="dekorasi atas"
+                            class="absolute top-0 left-0 w-full h-auto pointer-events-none z-10">
+                        <img src="assets/location-bunga.png" alt="bunga"
+                            class="absolute bottom-0 left-0 w-full h-auto pointer-events-none z-10 ">
+
+                        <!-- Gradasi HijauBagian Bawah -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-[#B5C99A]/50 via-[#B5C99A]/15 to-transparent pointer-events-none z-10">
+                        </div>
+
+                        <div
+                            class="absolute inset-0 rounded-t-[200px] rounded-b-2xl pointer-events-none shadow-[inset_0_10px_25px_rgba(138,154,134,0.3)] z-20">
+                        </div>
+
+                        <div class="relative z-20 pt-6">
+                            <h3 class=" font-script text-3xl text-brown mb-2">Akad Nikah</h3>
+                            <p class="mb-2 font-bold text-gray-600">Jumat</p>
+                            <p class="text-3xl font-script ">02.10.2026</p>
+                            <p class=" font-bold text-gray-600">08:00 - 10:00</p>
                         </div>
                     </div>
 
-                    <!-- Jadwal Resepsi -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm w-full md:w-72 border-t-4 border-brown">
-                        <h4 class="font-bold text-2xl mb-4 italic">Resepsi</h4>
-                        <div class="font-sans space-y-2 text-gray-600">
-                            <p class="font-semibold text-dark">Jumat</p>
-                            <p>02.10.2026</p>
-                            <p class="bg-sage/20 inline-block px-4 py-1 rounded-full text-brown font-semibold mt-2">
-                                10:00 - Selesai</p>
+                    <!-- Card 2: Resepsi  -->
+                    <div
+                        class="relative bg-cream pt-24 pb-8 px-6 rounded-t-[200px] rounded-b-2xl shadow-md overflow-hidden flex flex-col items-center text-center">
+                        <img src="assets/location-atas.png" alt="dekorasi atas"
+                            class="absolute top-0 left-0 w-full h-auto pointer-events-none z-10">
+                        <img src="assets/location-bunga.png" alt="bunga"
+                            class="absolute bottom-0 left-0 w-full h-auto pointer-events-none z-10 ">
+
+                        <!-- Gradasi HijauBagian Bawah -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-[#B5C99A]/50 via-[#B5C99A]/15 to-transparent pointer-events-none z-10">
+                        </div>
+
+                        <div
+                            class="absolute inset-0 rounded-t-[200px] rounded-b-2xl pointer-events-none shadow-[inset_0_10px_25px_rgba(138,154,134,0.3)] z-20">
+                        </div>
+
+                        <div class="relative z-20 pt-6">
+                            <h3 class=" font-script text-3xl text-brown mb-2">Resepsi</h3>
+                            <p class="mb-2 font-bold text-gray-600">Jumat</p>
+                            <p class="text-3xl font-script ">02.10.2026</p>
+                            <p class=" font-bold text-gray-600">10:00 - Selesai</p>
                         </div>
                     </div>
+
                 </div>
 
-                <!-- Detail Tempat -->
-                <div class="mb-16">
-                    <h3 class="font-bold text-3xl mb-3 text-brown">Hotel Pangeran</h3>
-                    <p class="text-gray-600 text-xl">Jln. Jendral Sudirman No.371-373,<br>Cinta Raya, Sail, Kota
-                        Pekanbaru, Riau</p>
-                </div>
+                <!-- Detail Hotel Pangeran Pekanbaru & Dress Code -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl mt-6">
 
-                <!-- Dress Code -->
-                <div class="bg-white/60 p-8 rounded-2xl max-w-md mx-auto border border-sage/40 backdrop-blur-sm">
-                    <p class="text-2xl mb-3 font-bold">Dress Code:</p>
-                    <p class="font-sans text-sm mb-4 text-gray-600">We kindly ask that you wear these colors to our
-                        special day</p>
-                    <p
-                        class="font-sans font-bold text-lg text-brown uppercase tracking-widest bg-sage/30 py-2 rounded-lg">
-                        Any Kind of Pastel
-                    </p>
+                    <!-- Dress Code -->
+                    <div class="bg-cream p-6 rounded-2xl shadow-md flex flex-col items-center">
+                        <h4 class=" uppercase font-bold tracking-widest text-gray-700 border-b pb-1 mb-3">Dress
+                            Code</h4>
+                        <p class="font-bold text-gray-700">We kindly ask that you wear these colors to our special day
+                        </p>
+                        <div class="flex gap-2 mt-4">
+                            <span class="w-4 h-4 rounded-full bg-[#e0d0b4]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#D4C3B3]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#B5C99A]"></span>
+                        </div>
+                        <div class="flex gap-2 mt-2">
+                            <span class="w-4 h-4 rounded-full bg-[#E8C8B8]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#D8A47F]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#94A388]"></span>
+                        </div>
+                        <div class="flex gap-2 mt-2">
+                            <span class="w-4 h-4 rounded-full bg-[#D5B9B2]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#C4A482]"></span>
+                            <span class="w-4 h-4 rounded-full bg-[#6B705C]"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Pangeran Pekanbaru -->
+                    <div class="bg-cream p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
+                        <img src="assets/icon-location.png" alt="icon" class="w-[26px] h-auto mb-2">
+                        <h4 class="font-bold text-gray-700 mb-1">Hotel Pangeran</h4>
+                        <p class="font-bold text-gray-700 mb-4">Jln. Jendral Sudirman No.371-373, Cinta Raja, Sail, Kota
+                            Pekanbaru, Riau</p>
+                        <a href="https://www.google.com/maps/place/Hotel+Pangeran/@0.5048192,101.4530477,17z/data=!3m1!4b1!4m9!3m8!1s0x31d5aebce81ef37f:0x9b837fcba8f106e9!5m2!4m1!1i2!8m2!3d0.5048192!4d101.4530477!16s%2Fg%2F1tz73gz5?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                            class="bg-[#8A9A86] text-white font-bold px-6 py-2 rounded-lg shadow hover:bg-[#788874] transition">
+                            Lokasi
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
