@@ -282,7 +282,7 @@
                 <div
                     class="bg-white p-8 rounded-2xl shadow-sm border-2 border-sage/80 text-center hover:shadow-md transition-shadow z-20 ">
                     <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Kenalan</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                    <p class="text-gray-600 text-lg font-bold leading-relaxed mt-4">
                         Berawal dari ketidaksengajaan di sebuah kedai kopi, cangkir yang tertukar dan obrolan singkat
                         yang ternyata berlanjut. Dari sekadar menyapa, interaksi yang santai perlahan berubah jadi
                         kebiasaan harian.
@@ -293,7 +293,7 @@
                 <div
                     class="bg-white p-8 rounded-2xl shadow-sm border-2 border-sage/80 text-center hover:shadow-md transition-shadow z-20">
                     <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Jadian</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                    <p class="text-gray-600 text-lg font-bold leading-relaxed mt-4">
                         Seiring berjalannya waktu, kecocokan dan rasa nyaman makin terasa. Tanpa drama atau perayaan
                         berlebihan, kami sepakat untuk mulai berjalan berdampingan dan saling mendukung satu sama lain.
                     </p>
@@ -303,7 +303,7 @@
                 <div
                     class="bg-white p-8 rounded-2xl shadow-sm border-2 border-sage/80 text-center hover:shadow-md transition-shadow z-20">
                     <h3 class="text-3xl font-bold mb-4 text-brown border-b border-sage pb-4 inline-block">Tunangan</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                    <p class="text-gray-600 text-lg font-bold leading-relaxed mt-4">
                         Kini, dengan penuh rasa syukur dan bahagia, kami melangkah ke babak baru dalam kisah kami,
                         menuju sebuah janji untuk saling menemani, menjaga, dan mencintai dalam setiap langkah
                         kehidupan.
@@ -433,9 +433,17 @@
             class="absolute top-0 left-0 h-[200px] md:h-[200px] w-auto z-10 pointer-events-none opacity-80 rotate-180">
         <img src="assets/halaman2-bawahkiri.png" alt="kanan bawah"
             class="absolute top-0 right-0 h-[200px] md:h-[200px] w-auto z-10 pointer-events-none opacity-80 rotate-180">
+        <img src="assets/gold-kiri.png" alt="gold kiri"
+            class="absolute top-30 -left-[11%] h-[60%] w-auto z-10 mix-blend-multiply pointer-events-none">
+        <img src="assets/gold-kanan.png" alt="gold kanan"
+            class="absolute top-30 -right-[11%] h-[60%] w-auto z-10 mix-blend-multiply pointer-events-none">
+        <!-- <img src="assets/halaman2-bawahkiri.png" alt="kiri bawah"
+            class="absolute bottom-0 left-0 h-[400px] w-auto z-10 pointer-events-none">
+        <img src="assets/halaman2-bawahkanan.png" alt="kanan bawah"
+            class="absolute bottom-0 right-0 h-[400px] w-auto z-10 pointer-events-none"> -->
 
         <!-- Frame Utama sage -->
-        <div class="relative w-full max-w-[1100px] bg-sage/40 rounded-3xl p-8 md:p-12 shadow-sm overflow-hidden">
+        <div class="relative w-full max-w-[1500px] bg-sage/40 rounded-3xl p-8 md:p-12 shadow-sm overflow-hidden">
             <img src="assets/halaman2-ataskiri.png" alt="dekorasi-kiri"
                 class="absolute top-0 left-0 w-32 md:w-48 pointer-events-none z-0">
             <img src="assets/halaman2-ataskanan.png" alt="dekorasi-kanan"
@@ -560,30 +568,34 @@
         </div>
     </section>
 
-    <!-- 7 & 8. SECTION RSVP & WISHES -->
+    <!-- 7. SECTION RSVP -->
     <section id="rsvp"
-        class="py-24 bg-cream bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTAgMGg4MHY4MEgwem00MCA0MGMxMS4wNDYgMCAyMC04Ljk1NCAyMC0yMFM1MS4wNDYgMCA0MCAwIDIwIDguOTU0IDIwIDIwczguOTU0IDIwIDIwIDIwem0wIDEwYzE2LjU2OCAwIDMwLTEzLjQzMiAzMC0zMFM1Ni41NjggMCA0MCAwIDEwIDEzLjQzMiAxMCAzMHMxMy40MzIgMzAgMzAgMzB6bTAgMTBjMjIuMDkxIDAgNDAtMTcuOTA5IDQwLTQwUzYyLjA5MSAwIDQwIDAgMCAxNy45MDkgMCA0MHMxNy45MDkgNDAgNDAgNDB6IiBmaWxsPSIjZDFkOWNhIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]">
-        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+        class="relative min-h-screen flex flex-col justify-center items-center py-24 bg-cream bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTAgMGg4MHY4MEgwem00MCA0MGMxMS4wNDYgMCAyMC04Ljk1NCAyMC0yMFM1MS4wNDYgMCA0MCAwIDIwIDguOTU0IDIwIDIwczguOTU0IDIwIDIwIDIwem0wIDEwYzE2LjU2OCAwIDMwLTEzLjQzMiAzMC0zMFM1Ni41NjggMCA0MCAwIDEwIDEzLjQzMiAxMCAzMHMxMy40MzIgMzAgMzAgMzB6bTAgMTBjMjIuMDkxIDAgNDAtMTcuOTA5IDQwLTQwUzYyLjA5MSAwIDQwIDAgMCAxNy45MDkgMCA0MHMxNy45MDkgNDAgNDAgNDAtIiBmaWxsPSIjZDFkOWNhIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc=')]">
+        <img src="assets/atas2.png" alt="top-arc" class="absolute top-0 left-0 w-full h-auto z-20 pointer-events-none">
+        <img src="assets/halaman1-kanan.png" alt="kanan bawah"
+            class="absolute bottom-0 right-0 h-[450px] w-auto z-10 pointer-events-none">
+        <img src="assets/halaman1-kiri.png" alt="kiri bawah"
+            class="absolute bottom-0 left-0 h-[450px] w-auto z-10 pointer-events-none">
 
-            <!-- FORM RSVP -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-sage/40">
-                <h2 class="font-script text-5xl text-center mb-8 text-brown">RSVP</h2>
-                <form class="flex flex-col gap-5 font-sans">
+        <div class="max-w-xl mx-auto mt-[5%] px-6 w-full">
+            <div
+                class="bg-sage p-10 md:p-14 rounded-full text-center shadow-[inset_0_4px_12px_rgba(0,0,0,0.15)] relative">
+                <h2 class="font-script text-5xl md:text-6xl text-brown mb-8">RSVP</h2>
+                <form class="flex flex-col gap-4 font-sans text-left">
                     <input type="text" placeholder="Nama"
-                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                        class="p-4 border border-sage/50 rounded-xl bg-white/70 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
                     <input type="email" placeholder="Email"
-                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                        class="p-4 border border-sage/50 rounded-xl bg-white/70 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
                     <input type="tel" placeholder="Nomor Telfon"
-                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                        class="p-4 border border-sage/50 rounded-xl bg-white/70 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
 
                     <div class="relative">
                         <select
-                            class="w-full p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown appearance-none text-gray-600 transition">
+                            class="w-full p-4 border border-sage/50 rounded-xl bg-white/70 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown appearance-none text-gray-600 transition shadow-sm">
                             <option value="" disabled selected>Konfirmasi Kehadiran</option>
                             <option value="hadir">Hadir</option>
                             <option value="tidak_hadir">Tidak Hadir</option>
                         </select>
-                        <!-- Custom Select Arrow -->
                         <div
                             class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -594,56 +606,153 @@
                     </div>
 
                     <input type="number" placeholder="Jumlah Tamu"
-                        class="p-4 border border-sage/50 rounded-xl bg-cream/30 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition">
+                        class="p-4 border border-sage/50 rounded-xl bg-white/70 focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
 
-                    <button type="submit"
-                        class="bg-brown text-white py-4 rounded-xl hover:bg-brown/80 transition-colors font-semibold tracking-wider uppercase mt-4 shadow-md">
-                        Kirim RSVP
-                    </button>
+                    <div class="text-center mt-4">
+                        <button type="submit"
+                            class="bg-brown text-white px-10 py-3.5 rounded-xl hover:bg-brown/80 transition-colors font-semibold tracking-wider uppercase shadow-md">
+                            Kirim
+                        </button>
+                    </div>
                 </form>
             </div>
+        </div>
+    </section>
 
-            <!-- FORM WISHES -->
-            <div class="bg-sage/20 p-8 rounded-2xl shadow-sm border border-sage/40 flex flex-col h-full">
-                <h2 class="font-script text-5xl text-center mb-8 text-brown">Wedding Wishes</h2>
-                <form class="flex flex-col gap-4 font-sans mb-8">
-                    <input type="text" placeholder="Nama"
+    <!-- 8. SECTION WEDDING WISHES -->
+    <style>
+        /* Sembunyikan scrollbar bawaan */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+    <!-- 8. SECTION WEDDING WISHES -->
+    <!-- 8. SECTION WEDDING WISHES -->
+    <section id="wishes"
+        class="relative min-h-screen flex flex-col justify-center items-center py-24 bg-cream bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHBhdGggZD0iTTAgMGg4MHY4MEgwem00MCA0MGMxMS4wNDYgMCAyMC04Ljk1NCAyMC0yMFM1MS4wNDYgMCA4MCAwIDIwIDguOTU0IDIwIDIwczguOTU0IDIwIDIwIDIwem0wIDEwYzE2LjU2OCAwIDMwLTEzLjQzMiAzMC0zMFM1Ni41NjggMCA0MCAwIDEwIDEzLjQzMiAxMCAzMHMxMy40MzIgMzAgMzAgMzB6bTAgMTBjMjIuMDkxIDAgNDAtMTcuOTA5IDQwLTQwUzYyLjA5MSAwIDQwIDAgMCAxNy45MDkgMCA0MHMxNy45MDkgNDAgNDAgNDAtIiBmaWxsPSIjZDFkOWNhIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]">
+        <img src="assets/halaman2-ataskiri.png" alt="kiri atas"
+            class="absolute top-0 left-0 h-[200px] w-auto z-30 pointer-events-none">
+        <img src="assets/halaman2-ataskanan.png" alt="kanan atas"
+            class="absolute top-0 right-0 h-[200px] w-auto z-30 pointer-events-none">
+        <img src="assets/halaman2-bawahkanan.png" alt="kanan bawah"
+            class="absolute top-0 left-0 -rotate-180 h-[300px] w-auto z-10 pointer-events-none">
+        <img src="assets/halaman2-bawahkiri.png" alt="kiri bawah"
+            class="absolute top-0 right-0 -rotate-180 h-[300px] w-auto z-10 pointer-events-none">
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-8 w-full relative z-20">
+            <div class="bg-sage/20 p-6 md:p-10 rounded-3xl shadow-sm border border-sage/40 flex flex-col">
+                <h2 class="font-script text-5xl md:text-6xl text-center mb-8 text-brown">Wedding Wishes</h2>
+
+                <!-- Form Input Ucapan -->
+                <form id="wishes-form" class="flex flex-col gap-4 font-sans mb-8 max-w-2xl mx-auto w-full">
+                    <input type="text" id="wish-name" placeholder="Nama" required
                         class="p-4 border border-white rounded-xl bg-white focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm">
-                    <textarea rows="3" placeholder="Tuliskan ucapan anda"
+                    <textarea id="wish-text" rows="3" placeholder="Tuliskan ucapan anda" maxlength="300" required
                         class="p-4 border border-white rounded-xl bg-white focus:outline-none focus:border-brown focus:ring-1 focus:ring-brown transition shadow-sm resize-none"></textarea>
 
                     <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
-                        <span>Sisa huruf: 300</span>
-                        <button type="button"
-                            class="bg-brown text-white px-8 py-3 rounded-full hover:bg-brown/80 transition shadow-md font-semibold tracking-wide">
+                        <span id="char-count">Sisa huruf: 300</span>
+                        <button type="submit"
+                            class="bg-brown text-white px-8 py-3 rounded-full hover:bg-brown/80 transition shadow-md font-semibold tracking-wide cursor-pointer">
                             Kirim
                         </button>
                     </div>
                 </form>
 
-                <!-- List Ucapan (Scrollable) -->
-                <div class="space-y-4 overflow-y-auto flex-grow max-h-[300px] pr-2 font-sans custom-scrollbar">
-                    <div class="bg-white p-4 rounded-xl shadow-sm flex gap-4">
+                <!-- Grid Ucapan 2 Kolom (Card Lebih Besar, Batas Tampil ~3 Baris) -->
+                <div id="wishes-list"
+                    class="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto max-h-[350px] p-2 font-sans no-scrollbar">
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
                         <div
-                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-lg shrink-0">
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
                             V</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Vito</p>
-                            <p class="text-gray-600 mt-1 text-sm">Happy Wedding!</p>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Vito</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Happy Wedding!</p>
                         </div>
                     </div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm flex gap-4">
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
                         <div
-                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-lg shrink-0">
-                            C</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Cika</p>
-                            <p class="text-gray-600 mt-1 text-sm">Wow congratss! Semoga lancar sampai hari H.</p>
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            D</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Dinda</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Selamat menempuh hidup baru ya!</p>
                         </div>
                     </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            R</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Rizki</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Barakallah, semoga sakinah mawaddah
+                                warahmah.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            A</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Amira</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Happy wedding Mufid dan Cia tercinta!</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            C</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Cika</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Wow congratss! Semoga lancar sampai hari H.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            B</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Budi</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Congratulations bro! Ikut bahagia.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            S</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Siti</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Sakinah selalu ya buat kalian berdua.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">
+                            T</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-gray-800 text-base mb-1 truncate">Tio</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Mantap cuy, akhirnya menikah juga!</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </div>
     </section>
 
