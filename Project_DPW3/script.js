@@ -17,7 +17,7 @@ if (menuBtn && menuDropdown) {
     }
   });
 
-  // Tutup menu saat link diklik
+  // Tutup menu saat link diklik (terutama berguna di versi mobile)
   const menuLinks = menuDropdown.querySelectorAll("a");
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -31,7 +31,7 @@ if (menuBtn && menuDropdown) {
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------
-  // 2. GALERI INFINITE CAROUSEL (KODE ASLI KAMU)
+  // 2. GALERI INFINITE CAROUSEL
   // ------------------------------------------
   const container = document.getElementById("gallery-container");
   const btnPrev = document.getElementById("btn-prev");
@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const originalItems = Array.from(
       container.querySelectorAll(".gallery-item"),
     );
-    const N = originalItems.length; // 10 foto
+    const N = originalItems.length;
 
-    // Duplikasi item di kiri dan kanan (Total 30 foto untuk efek tanpa henti)
+    // Duplikasi item di kiri dan kanan
     originalItems.forEach((item) => {
       const cloneBefore = item.cloneNode(true);
       container.prepend(cloneBefore);
@@ -60,11 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
       container.style.paddingLeft = `${Math.max(0, pad)}px`;
       container.style.paddingRight = `${Math.max(0, pad)}px`;
     };
+
+    // Inisialisasi padding
     updatePadding();
 
-    let currentIndex = N; // Mulai dari set tengah (foto indeks ke-10)
+    let currentIndex = N;
 
-    // Fungsi scroll ke indeks item target
     const scrollToIndex = (index, smooth = true) => {
       if (index < 0 || index >= allItems.length) return;
       allItems[index].scrollIntoView({
@@ -74,13 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    // Set posisi awal ke tengah tanpa animasi
     setTimeout(() => {
       scrollToIndex(currentIndex, false);
       updateHighlights();
     }, 100);
 
-    // Efek Membesar untuk Foto di Tengah
     const updateHighlights = () => {
       const containerCenter =
         container.getBoundingClientRect().left + container.clientWidth / 2;
@@ -125,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    // Cek Infinite Loop secara tak terlihat saat scroll berhenti
     let scrollTimer;
     let isJumping = false;
 
@@ -156,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 150);
     });
 
-    // Tombol Kanan & Kiri
     btnPrev.addEventListener("click", () => {
       currentIndex--;
       scrollToIndex(currentIndex, true);
@@ -167,14 +164,16 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollToIndex(currentIndex, true);
     });
 
+    // Menangani perubahan ukuran layar (rotasi layar atau resize windows)
     window.addEventListener("resize", () => {
       updatePadding();
+      scrollToIndex(currentIndex, false);
       updateHighlights();
     });
   }
 
   // ------------------------------------------
-  // 3. RSVP FORM SUBMIT (TANPA RELOAD)
+  // 3. RSVP FORM SUBMIT
   // ------------------------------------------
   const rsvpForm = document.querySelector("#rsvp form");
   if (rsvpForm) {
@@ -188,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------------------
-  // 4. WEDDING WISHES (CARD BESAR & AUTOSCROLL FADE-OUT)
+  // 4. WEDDING WISHES
   // ------------------------------------------
   const wishForm = document.getElementById("wishes-form");
   const wishNameInput = document.getElementById("wish-name");
@@ -196,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const charCountSpan = document.getElementById("char-count");
   const wishesList = document.getElementById("wishes-list");
 
-  // a. Counter Sisa Huruf Real-time
   if (wishTextInput && charCountSpan) {
     wishTextInput.addEventListener("input", function () {
       const remaining = 300 - this.value.length;
@@ -204,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // b. Submit Ucapan Tanpa Reload Halaman (Format Card Besar p-5)
   if (wishForm && wishesList) {
     wishForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -217,40 +214,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const newWishCard = document.createElement("div");
         newWishCard.className =
-          "bg-white p-5 rounded-2xl shadow-sm flex items-start gap-4 transition-all duration-300";
+          "bg-white/90 p-4 md:p-5 rounded-2xl shadow-sm flex items-start gap-4 transition-all duration-300";
         newWishCard.innerHTML = `
-            <div class="w-12 h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-xl shrink-0">${initial}</div>
+            <div class="w-10 h-10 md:w-12 md:h-12 bg-sage rounded-full flex items-center justify-center text-brown font-bold text-lg md:text-xl shrink-0">${initial}</div>
             <div class="flex-1 min-w-0">
-                <p class="font-bold text-gray-800 text-base mb-1 truncate">${escapeHtml(name)}</p>
-                <p class="text-gray-600 text-sm leading-relaxed">${escapeHtml(text)}</p>
+                <p class="font-bold text-gray-800 text-sm md:text-base mb-1 truncate">${escapeHtml(name)}</p>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">${escapeHtml(text)}</p>
             </div>
         `;
 
-        // Masukkan ucapan baru ke paling atas
         wishesList.prepend(newWishCard);
-
-        // Reset input form
         wishForm.reset();
         charCountSpan.textContent = "Sisa huruf: 300";
-
-        // Scroll langsung ke paling atas agar ucapan baru langsung terlihat
         wishesList.scrollTop = 0;
       }
     });
   }
 
-  // c. Autoscroll Pelan + Fade-Out Transisi saat Reset Loop
+  // Autoscroll pada daftar ucapan
   if (wishesList) {
     let isHovered = false;
     let isResetting = false;
     let scrollAccumulator = 0;
-    const scrollSpeed = 0.25; // Kecepatan halus
+    const scrollSpeed = 0.25;
 
     wishesList.classList.add("transition-opacity", "duration-500");
 
+    // Pause scroll saat disentuh / hover (Penting untuk versi mobile agar mudah dibaca)
     wishesList.addEventListener("mouseenter", () => (isHovered = true));
     wishesList.addEventListener("mouseleave", () => (isHovered = false));
-    wishesList.addEventListener("touchstart", () => (isHovered = true));
+    wishesList.addEventListener("touchstart", () => (isHovered = true), {
+      passive: true,
+    });
     wishesList.addEventListener("touchend", () => (isHovered = false));
 
     function autoScrollWishes() {
@@ -265,21 +260,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const step = Math.floor(scrollAccumulator);
           scrollAccumulator -= step;
 
-          // Saat scroll menyentuh batas paling bawah
           if (
             Math.ceil(wishesList.scrollTop + wishesList.clientHeight) >=
             wishesList.scrollHeight - 2
           ) {
             isResetting = true;
-
-            // Step 1: Fade out
             wishesList.style.opacity = "0";
 
-            // Step 2: Kembalikan scroll ke paling atas
             setTimeout(() => {
               wishesList.scrollTop = 0;
-
-              // Step 3: Fade in kembali
               setTimeout(() => {
                 wishesList.style.opacity = "1";
                 isResetting = false;
@@ -296,7 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(autoScrollWishes);
   }
 
-  // Helper Sanitasi HTML (Mencegah XSS)
   function escapeHtml(str) {
     return str
       .replace(/&/g, "&amp;")
@@ -304,5 +292,135 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
+  }
+});
+
+// ==========================================
+// BACKGROUND MUSIC CONTROL (DENGAN IMG & PUTAR LAMBAT)
+// ==========================================
+const musicBtn = document.getElementById("music-btn");
+const bgMusic = document.getElementById("bg-music");
+const musicIcon = document.getElementById("music-icon");
+
+if (musicBtn && bgMusic) {
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicBtn.classList.remove("bg-brown");
+      musicBtn.classList.add("bg-white/90");
+      if (musicIcon) musicIcon.classList.remove("putar-lambat"); // Hapus kelas putar lambat
+      isPlaying = false;
+    } else {
+      bgMusic
+        .play()
+        .then(() => {
+          musicBtn.classList.add("bg-brown");
+          musicBtn.classList.remove("bg-white/90");
+          if (musicIcon) musicIcon.classList.add("putar-lambat"); // Tambahkan kelas putar lambat
+          isPlaying = true;
+        })
+        .catch((error) => {
+          console.log("Autoplay dicegah oleh browser:", error);
+        });
+    }
+  }
+
+  musicBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMusic();
+  });
+
+  const openInvitationBtn = document.querySelector('a[href="#greeting"]');
+  if (openInvitationBtn) {
+    openInvitationBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        toggleMusic();
+      }
+    });
+  }
+}
+
+// ==========================================
+// BUKA UNDANGAN & KUNCI SCROLL COVER
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const btnBuka = document.getElementById("btn-buka");
+  const coverSection = document.getElementById("cover");
+
+  // 1. Kunci scroll body di awal
+  document.body.style.overflow = "hidden";
+
+  if (btnBuka && coverSection) {
+    btnBuka.addEventListener("click", () => {
+      // 2. Aktifkan kembali scroll pada body
+      document.body.style.overflow = "auto";
+
+      // 3. Hilangkan cover dengan efek transisi halus
+      coverSection.style.opacity = "0";
+      coverSection.style.visibility = "hidden";
+
+      // Hapus elemen dari layout setelah animasi selesai
+      setTimeout(() => {
+        coverSection.style.display = "none";
+      }, 700);
+
+      // 4. (Opsional) Nyalakan musik otomatis jika fungsi musik Anda aktif
+      if (typeof toggleMusic === "function" && !isPlaying) {
+        toggleMusic();
+      }
+    });
+  }
+});
+
+// ==========================================
+// BUKA UNDANGAN, SCROLL KE GREETING, & AUDIO
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Paksa browser untuk kembali ke paling atas (0, 0) saat di-refresh
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+
+  const btnBuka = document.getElementById("btn-buka");
+  const bgMusic = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-btn");
+  const musicIcon = document.getElementById("music-icon");
+
+  // 2. Kunci scroll body di awal agar tidak bisa digulir manual
+  document.body.style.overflow = "hidden";
+
+  if (btnBuka) {
+    btnBuka.addEventListener("click", () => {
+      // 3. Buka kunci scroll body
+      document.body.style.overflow = "auto";
+
+      // 4. Putar musik secara otomatis saat tombol diklik
+      if (bgMusic) {
+        bgMusic
+          .play()
+          .then(() => {
+            if (musicBtn) {
+              musicBtn.classList.add("bg-brown");
+              musicBtn.classList.remove("bg-white/90");
+            }
+            if (musicIcon) {
+              musicIcon.classList.add("putar-lambat");
+            }
+            if (typeof isPlaying !== "undefined") isPlaying = true;
+          })
+          .catch((error) => {
+            console.log("Autoplay dicegah:", error);
+          });
+      }
+
+      // 5. Scroll mulus tepat ke section #greeting tanpa nyasar
+      const greetingSection = document.querySelector("#greeting");
+      if (greetingSection) {
+        greetingSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
 });
